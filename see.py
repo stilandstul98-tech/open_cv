@@ -28,8 +28,8 @@ while cap.isOpened():
     
     
     for cont in conturs:
-        if cv2.contourArea(cont) < 500:
-            continue
+        # if cv2.contourArea(cont) < 500:
+        #     continue
         x, y, w, h = cv2.boundingRect(cont)
         cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
         
